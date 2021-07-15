@@ -9,3 +9,13 @@ $app->get('/hello/{name}', function (Request $request, Response $response, array
 
     return $response;
 });
+
+$app->get(
+    '/',
+    function (Request $request, Response $response, array $args) {
+        $response->getBody()->write(
+          "Hello World!"
+        );
+        return $response;
+    }
+  );
